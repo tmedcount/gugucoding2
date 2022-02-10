@@ -91,4 +91,19 @@ public class SampleController {
 		
 		return "/sample/ex04";
 	}
+	
+	@GetMapping("/re1")
+	public String re1() {
+		log.info("re1.......................");
+		
+		//reponse.sendRedirect("...");
+		return "redirect:/sample/re2";
+	}
+	
+	@GetMapping("/re2")
+	public void re2() {
+		log.info("re2.......................");
+	}
+	
+	
 }
