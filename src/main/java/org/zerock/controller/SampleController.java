@@ -71,7 +71,8 @@ public class SampleController {
 		return "ex02Array";
 	}
 	
-	@GetMapping("/ex02Bean")
+	//http:/localhost:8080/sample/ex02Bean?list%5B0%5d.name=AAA&list%5B1%5d.name=BBB
+	@GetMapping({"/ex02Bean", "/ex022"})
 	public String ex02Bean(SampleDTOList list) {
 		log.info("list dtos: " + list);
 		return "ex02Bean";
